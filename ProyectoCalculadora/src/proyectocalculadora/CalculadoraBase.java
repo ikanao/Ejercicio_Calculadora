@@ -49,7 +49,7 @@ public class CalculadoraBase {
     
     public void Multiplicar(){
         Double resultado = this.getNumero1() * this.getNumero2();
-        System.out.println("La resta es: " + resultado);
+        System.out.println("La multiplicación es: " + resultado);
     }
     
     public void Dividir(){
@@ -60,4 +60,16 @@ public class CalculadoraBase {
             System.out.println("La resta es: " + resultado);
         }
     }
+    
+    // División inversa -> Polimorfismo
+    public void Dividir(char caracter){
+        if (caracter == 's') {
+            Double resultado = this.getNumero2() / this.getNumero1();
+            System.out.println("La división inversa es: " + resultado);
+        }else{
+            System.out.println("No se ha ejecutado la división inversa.");
+        }
+    }
+    
+    
 }
