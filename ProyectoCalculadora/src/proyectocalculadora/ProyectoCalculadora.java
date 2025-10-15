@@ -1,20 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package proyectocalculadora;
+
+import java.util.Scanner;
 
 /**
  *
- * @author alanayca
+ * @author ikanao
  */
 public class ProyectoCalculadora {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Creando el objeto scanner
+        Scanner scanner = new Scanner(System.in);
+        
+        // Definiendo variables
+        Double numero1, numero2;
+        
+        // Solicitando al usuario ingresar un valor
+        numero1 = scanner.nextDouble();
+        numero2 = scanner.nextDouble();
+        
+        // Creando el objeto calculador
+        CalculadoraBase calculadoraBase = new CalculadoraBase(numero1, numero2);
+        
+        calculadoraBase.Sumar();
+        calculadoraBase.Restar();
+        calculadoraBase.Multiplicar();
+        calculadoraBase.Dividir();
+       
     }
     
 }
